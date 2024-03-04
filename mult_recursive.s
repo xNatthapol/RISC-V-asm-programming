@@ -12,9 +12,9 @@ main:
     ecall # Environment call
 
     # use print_string to print a newline
-    addi a0, x0, 4
-    la a1, newline
-    ecall
+    addi a0, x0, 4 # set a0 to be 4 for print_string
+    la a1, newline # set a1 to be newline for print_string
+    ecall # Environment call
 
     addi a0, x0, 10 # set a0 to be 10 for termination
     ecall # Environment call
@@ -35,7 +35,7 @@ mult:
     jal mult # mult function caller for recursive call
 
     # restoring the a0 value from the stack before the recursive call
-    lw t1, 0(sp) # loading the a0 value from the stack
+    lw t1, 0(sp) # loading the t1 value from the stack
     addi sp, sp, 4 # sp = sp + 4
     add a0, a0, t1 # a = a + t1
 
