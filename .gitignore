@@ -1,0 +1,5 @@
+# ignore files that are generated during the compilation process
+*
+
+# ignore to ignore the normal files
+!*.*
