@@ -34,11 +34,8 @@ mult:
     addi a1, a1, -1 # b = b - 1
     jal mult # mult function caller for recursive call
 
-    # a + mult(a, b-1)
-    mv t1, a0 # t1 = a0
-
     # restoring the a0 value from the stack before the recursive call
-    lw a0, 0(sp) # loading the a0 value from the stack
+    lw t1, 0(sp) # loading the a0 value from the stack
     addi sp, sp, 4 # sp = sp + 4
     add a0, a0, t1 # a = a + t1
 
