@@ -3,3 +3,6 @@
 
 # ignore to ignore the normal files
 !*.*
+
+# ignore c file
+*.c
